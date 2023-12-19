@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Formulário Destino</title>
+</head>
+
+<body>
+	<main>
+		<!-- form  -->
+		<form method="POST" th:object="${Destino}" class="  container-fluid mx-auto">
+			<div class="  form-crud ">
+				<fieldset>
+					<legend>Dados Destino</legend>
+
+					<input type="hidden" th:field="*{id}" readonly >
+
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="cidade">Cidade</label>
+								<input type="text" class="form-control" placeholder="São Paulo" th:field="*{cidade}"
+									required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="estado">Estado</label>
+								<input type="text" class="form-control" placeholder="SP"
+									th:field="*{estado}" required>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="descricao">Descricao</label>
+								<input type="text" class="form-control" placeholder="exmplo descricao"
+									th:field="*{descricao}" required>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class=" text-center row mt-3">
+					<button type="submit" class="btn btn-primary col mx-auto">Salvar</button>
+				</div>
+			</div>
+
+		</form>
+	</main>
+</body>
+
+</html>

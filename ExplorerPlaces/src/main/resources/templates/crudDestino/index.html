@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+	<title>Listagem Destino</title>
+</head>
+
+<body>
+	<main>
+		<div class="row">
+			<div class="col-sm-12">
+
+				<!-- navegacao admin -->
+				<nav>
+				    <ul>
+				      <li><a th:href="@{/home}"><b>Home</b></a></li>
+				      <li><a th:href="@{/clientes}"><b>Clientes</b></a></li>
+				      <li><a th:href="@{/destinos_crud}"><b>Destinos</b></a></li>
+				    </ul>
+				</nav>
+				
+				<a th:href="@{/destinos_crud/cadastrar}" class="btn btn-primary my-1">Novo destino</a>
+
+				<div class="card">
+					<div class="card-body table-responsive p-0">
+						<table class="table table-hover text-nowrap">
+							<thead class=" ">
+								<tr>
+									<th>Id</th>
+									<th>Cidade</th>
+									<th>Estado</th>
+									<th>Descrição</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="destino : ${Destinos}">
+									<td th:text="${destino.id}">0</td>
+									<td th:text="${destino.cidade}">São Paulo</td>
+									<td th:text="${destino.estado}">SP</td>
+									<td th:text="${destino.descricao}">Exemplo Descrição</td>
+									<td>
+										<div class="btn-group">
+											<a type="button" class="btn btn-primary"
+												th:href="@{/destinos_crud/{id} (id=${destino.id})}">
+											</a>
+											<a type="button" class="btn btn-warning"
+												th:href="@{/destinos_crud/editar/{id} (id=${destino.id})}">
+											</a>
+											<a type="button" 
+												th:href="@{/destinos_crud/excluir/{id} (id=${destino.id})}"
+												onclick="return confirm('Tem certeza que deseja excluir o destino?');">
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

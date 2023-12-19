@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+	<title>Listagem Cliente</title>
+</head>
+
+<body>
+	<main>
+		<div class="row">
+			<div class="col-sm-12">
+				<!-- navegacao admin -->
+				<nav>
+				    <ul>
+				      <li><a th:href="@{/home}"><b>Home</b></a></li>
+				      <li><a th:href="@{/clientes}"><b>Clientes</b></a></li>
+				      <li><a th:href="@{/destinos_crud}"><b>Destinos</b></a></li>
+				    </ul>
+				</nav>
+				<a th:href="@{/clientes/cadastrar}" class="btn btn-primary my-1">Novo Cliente</a>
+
+				<div class="card">
+					<div class="card-body table-responsive p-0">
+						<table class="table table-hover text-nowrap">
+							<thead class=" ">
+								<tr>
+									<th>Id</th>
+									<th>Nome</th>
+									<th>Telefone</th>
+									<th>Email</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="cliente : ${Clientes}">
+									<td th:text="${cliente.id}">0</td>
+									<td th:text="${cliente.nome}">Maria</td>
+									<td th:text="${cliente.telefone}">(99) 99999-0000</td>
+									<td th:text="${cliente.email}">maria@email.com</td>
+									<td>
+										<div class="btn-group">
+											<a type="button" class="btn btn-primary"
+												th:href="@{/clientes/{id} (id=${cliente.id})}">
+											</a>
+											<a type="button" class="btn btn-warning"
+												th:href="@{/clientes/editar/{id} (id=${cliente.id})}">
+											</a>
+											<a type="button" 
+												th:href="@{/clientes/excluir/{id} (id=${cliente.id})}"
+												onclick="return confirm('Tem certeza que deseja excluir o cliente?');">
+											</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

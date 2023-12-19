@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Formulário Cliente</title>
+</head>
+
+<body>
+	<main>
+		<!-- form  -->
+		<form method="POST" th:object="${Cliente}" class="  container-fluid mx-auto">
+			<div class="  form-crud ">
+				<fieldset>
+					<legend>Dados Pessoais</legend>
+
+					<input type="hidden" th:field="*{id}" readonly >
+
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="nome">Nome</label>
+								<input type="text" class="form-control" placeholder="Nome" th:field="*{nome}"
+									required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="telefone">Telefone</label>
+								<input type="text" class="form-control" placeholder="(11) 00000-9999"
+									th:field="*{telefone}" required>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="email">E-mail</label>
+								<input type="email" class="form-control" placeholder="maria@exemplo.com"
+									th:field="*{email}" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="senha">Senha</label>
+								<input type="text" class="form-control" th:field="*{senha}" required>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class=" text-center row mt-3">
+					<button type="submit" class="btn btn-primary col mx-auto">Salvar</button>
+				</div>
+			</div>
+
+		</form>
+	</main>
+</body>
+
+</html>

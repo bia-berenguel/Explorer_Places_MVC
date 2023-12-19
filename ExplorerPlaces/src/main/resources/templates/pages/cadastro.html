@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cadastro</title>
+    <style>
+        body{
+            background-image: url(../img/fundo-cadastro.jpg);
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+}
+    </style>
+</head>
+    <body>
+        <div class="menu-viagens">
+          <img src="../img/logo.png" width="210px">
+      
+          <ul>
+           <li><a th:href="@{/home}"><b>Home</b></a></li>
+           <li><a th:href="@{/destinos}"><b>Destinos</b></a></li>
+           <li><a th:href="@{/contato}"><b>Contato</b></a></li>
+           <li><a th:href="@{/cadastro}"><b>Cadastre-se</b></a></li>
+          </ul>
+        </div>
+
+
+        <div class="box">
+            <div class="img-box">
+                <img src="../img/world-animate.svg">
+            </div>
+            <div class="form-box">
+                <h2>Criar Conta</h2>
+                <p> Já é um membro? <a href="#"> Login </a> </p>
+                <form  method="POST" th:object="${Cliente}" th:action="@{/clientes/cadastrar}">
+                    <div class="input-group">
+                        <label for="nome"> Nome Completo</label>
+                        <input type="text" id="nome" th:field="*{nome}" placeholder="Digite o seu nome completo" required>
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email"  th:field="*{email}" placeholder="Digite o seu email" required>
+                    </div>
+    
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone"  th:field="*{telefone}" placeholder="Digite o seu telefone" required>
+                    </div>
+    
+                    <div class="input-group w50">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" th:field="*{senha}" placeholder="Digite sua senha" required>
+                    </div>
+    
+                    <div class="input-group w50">
+                        <label for="Confirmarsenha">Confirmar Senha</label>
+                        <input type="password" id="Confirmarsenha" th:field="*{confirmasenha}" placeholder="Confirme a senha" required>
+                    </div>
+    
+                    <div class="input-group">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+        
+        
+        <main>
+
+        </main>
+        <footer>
+          <div id="footer_content">
+            <div id="footer_contacts">
+              <h1>Siga-nos</h1>
+              <p>Nossas redes sociais de contato:</p>
+    
+              <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+                <a href="#" class="footer-link" id="facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+    
+                <a href="#" class="footer-link" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+           <ul class="footer-list">
+             <li>
+               <h3>Páginas</h3>
+             </li>
+             <li>
+              <a th:href="@{/cadastro}" class="footer-link">Cadastre-se</a>
+             </li>
+             <li>
+              <a th:href="@{/contato}" class="footer-link">Contato</a>
+             </li>
+             <li>
+              <a th:href="@{/destinos}" class="footer-link">Destinos</a>
+             </li>
+           </ul>
+          
+           <ul class="footer-list">
+            <li>
+              <h3>Produtos</h3>
+            </li>
+            <li>
+             <a th:href="@{/home}" class="footer-link">Promoções</a>
+            </li>
+            <li>
+             <a th:href="@{/contato}" class="footer-link">Fale Conosco</a>
+            </li>
+          </ul>
+    
+           <div id="footer_subscribe">
+             <h3>Receba notificações</h3>
+    
+             <p>
+              Enviaremos à seu e-mail as melhores ofertas para que não perca nenhuma!
+             </p>
+    
+             <div id="input_group">
+              <input type="email" id="email">
+              <button>
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+             </div>
+          </div>
+        </div>
+    
+        <div id="footer_copyright">
+          &#169
+          2023 Todos os direitos são reservados.
+        </div>
+      </footer>
+      
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
+    </body>
+    </html>

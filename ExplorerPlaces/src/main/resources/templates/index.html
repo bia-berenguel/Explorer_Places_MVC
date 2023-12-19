@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/Css/style.css">
+    <title>ExplorerPlaces</title>
+</head>
+<body>
+  <div class="menu-viagens">
+    <img src="./img/logo.png" width="210px">
+
+    <ul>
+      <li><a th:href="@{/home}"><b>Home</b></a></li>
+      <li><a th:href="@{/destinos}"><b>Destinos</b></a></li>
+      <li><a th:href="@{/contato}"><b>Contato</b></a></li>
+      <li><a th:href="@{/cadastro}"><b>Cadastre-se</b></a></li>
+      <li><a th:href="@{/clientes}"><b>Admin</b></a></li>
+    </ul>
+  </div>
+
+    <div class="background-banner-home">
+        <header></header>
+
+        <div class="banner-meio-container">
+            <div class="meio-banner">
+            <h1>Explorar traz a emoção <br>do novo, permita-se!</h1>
+            <p><mark><b>Na vida a única coisa que levamos para sempre são as memórias, <br>colecione experiências únicas.</b></mark></p>
+            <a th:href="@{/destinos}"><button class="btn-ofertas"><b>Melhores Destinos</b></button></a>
+            </div><!--meio-banner-->
+        </div><!--banner-meio-container-->
+    
+    </div><!--background-banner-home-->
+
+    
+    <h2><br><b>Promoções Imperdíveis:</b><br><br></h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="./img/gramado-rs.jpg" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Gramado-RS</b></h5>
+              <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+              <a href="#" class="btn btn-primary"><b>R$ 1.220,00</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./img/rio-janeiro.jpg" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Rio de Janeiro-RJ</b></h5>
+              <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+              <a href="#" class="btn btn-primary"><b>R$ 990,00</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./img/lencois-maranhenses.jpg" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Lençóis Maranhenses-MA</b></h5>
+              <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+              <a href="#" class="btn btn-primary"><b>R$ 890,00</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./img/porto-de-galinhas.jpg" height="250" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><b>Porto de Galinhas-PE</b></h5>
+              <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+              <a href="#" class="btn btn-primary"><b>R$ 1.100,00</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+              <img src="./img/campos-do-jordao.jpg" height="250" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Campos do Jordão-SP</b></h5>
+                <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+                <a href="#" class="btn btn-primary"><b>R$ 1.090,00</b></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/holambra.jpg" height="250" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Holambra-SP</b></h5>
+                <p class="card-text">✔ Passeios turísticos<br>✔ Hotel<br>✔ Café da Manhã<br>✔ Wi-fi<br>✔ Estacionamento</p>
+                <a href="#" class="btn btn-primary"><b>R$ 890,00</b></a>
+              </div>
+            </div>
+          </div>
+    </div>
+    <main>
+
+    </main>
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contacts">
+          <h1>Siga-nos</h1>
+          <p>Nossas redes sociais de contato:</p>
+
+          <div id="footer_social_media">
+            <a href="#" class="footer-link" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+       <ul class="footer-list">
+         <li>
+           <h3>Páginas</h3>
+         </li>
+         <li>
+              <a th:href="@{/cadastro}" class="footer-link">Cadastre-se</a>
+             </li>
+             <li>
+              <a th:href="@{/contato}" class="footer-link">Contato</a>
+             </li>
+             <li>
+              <a th:href="@{/destinos}" class="footer-link">Destinos</a>
+         </li>
+       </ul>
+      
+       <ul class="footer-list">
+        <li>
+          <h3>Produtos</h3>
+        </li>
+        <li>
+             <a th:href="@{/home}" class="footer-link">Promoções</a>
+            </li>
+            <li>
+             <a th:href="@{/contato}" class="footer-link">Fale Conosco</a>
+            </li>
+          </ul>
+
+       <div id="footer_subscribe">
+         <h3>Receba notificações</h3>
+
+         <p>
+          Enviaremos à seu e-mail as melhores ofertas para que não perca nenhuma!
+         </p>
+
+         <div id="input_group">
+          <input type="email" id="email">
+          <button>
+            <i class="fa-regular fa-envelope"></i>
+          </button>
+         </div>
+      </div>
+    </div>
+
+    <div id="footer_copyright">
+      &#169
+      2023 Todos os direitos são reservados.
+    </div>
+  </footer>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
+</body>
+</html>
