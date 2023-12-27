@@ -9,7 +9,7 @@ import br.com.ExplorerPlaces.model.Cliente;
 @Controller
 public class ConteudoDirecionamentoController {
 
-	@GetMapping("/home")
+	@GetMapping("/index")
 	public ModelAndView home() {
 		ModelAndView modelAndView = new ModelAndView("index.html");
 
